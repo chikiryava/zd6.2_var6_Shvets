@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pract6_2_variant6_Shvets.CountSumm">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Label Text="Расчет стоимость техобслуживания" FontSize="20" HorizontalOptions="Center" />
+            <Label Text="Стоимость техобслуживания: "
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="15"
+                   x:Name="stoPriceLabel"/>
+            <Button Clicked="homePageButton_Clicked" Text="Вернуться на главную страницу"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

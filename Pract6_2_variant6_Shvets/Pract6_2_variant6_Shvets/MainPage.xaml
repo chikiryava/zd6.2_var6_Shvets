@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pract6_2_variant6_Shvets.MainPage"
+             x:Name="carousel">
+    <ContentPage>
+        <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Онлайн-техобслуживание (техосмотр)" FontSize="20" TextColor="Blue" FontAttributes="Bold"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Вид работы:" HorizontalOptions="Center" FontSize="15" TextColor="Black"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <ListView x:Name="workList"
+                      ItemSelected="workList_ItemSelected"
+                      HasUnevenRows="True"
+                      ItemsSource="{Binding work}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell
+                            x:Name="value"
+                        ImageSource="{Binding Image}"
+                        Text="{Binding Title}"
+                        TextColor="Red"
+                        DetailColor="Green"
+                        />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </StackLayout>
+    </ContentPage>
+    <ContentPage x:Name="second">
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="5,20,0,0" >
+                <Label Text="Адрес: Первомайская 24" FontSize="20"/>
+                
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="5,10,0,0">
+                <Label Text="Телефон: 88005553535" FontSize="20"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="5,10,0,0">
+                <Label Text="Оклад:" FontSize="20"/>
+                <Entry  WidthRequest="200" Margin="0,-20,0,0" FontSize="20" x:Name="okladEntry"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="5,10,0,0">
+                <Label Text="Марка авто:" FontSize="20"/>
+                <Entry  WidthRequest="200" Margin="0,-20,0,0" FontSize="20" x:Name="vehicleEntry"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="5,10,0,0">
+                <Label Text="Пробег: 2000" FontSize="20"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="5,10,0,0">
+                <Label Text="Владелец: Бондырев Игорь" FontSize="20"/>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="5,10,0,0">
+                <Label Text="Техпаспорт: 1242145" FontSize="20"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="5,10,0,0">
+                <Label Text="Год выпуска:2021" FontSize="20"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
+                <Label Text="Дата окончания:" FontSize="20" x:Name="endLabel"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="5,10,0,0">
+                <Label Text="Стоимость" FontSize="20"/>
+                <Entry  WidthRequest="200" Margin="0,-20,0,0" FontSize="20" x:Name="priceEntry"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="5,10,0,0">
+                <Label Text="Содержание ремонта" FontSize="20"/>
+                <Entry  WidthRequest="150" Margin="0,-20,0,0" FontSize="20" x:Name="maintenenceEntry"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name = "choiseTermButton" Text="Выбрать срок" Clicked="choiseTermButton_Clicked"></Button>
+                <Button x:Name = "countSummButton" Text="Высчитать стоимость" Clicked="countSummButton_Clicked"></Button>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage>
+
+
+</CarouselPage>

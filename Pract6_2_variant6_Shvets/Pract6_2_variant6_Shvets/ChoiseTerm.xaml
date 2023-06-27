@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pract6_2_variant6_Shvets.ChoiseTerm">
+    <ContentPage.Resources >
+        <StyleSheet Style="style.css"></StyleSheet>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal" Margin="0,50,0,0" HorizontalOptions="Center">
+                <Label FontSize="30">Выбор срока исполнения</Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="0,50,0,0" HorizontalOptions="Center">
+                <Entry FontSize="20" WidthRequest="150" x:Name="days"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="0,20,0,0" HorizontalOptions="Center">
+                <Label FontSize="18" WidthRequest="150" x:Name="vehicleMark">fasfas</Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="0,20,0,0" HorizontalOptions="Center">
+                <Label FontSize="18" WidthRequest="150" x:Name="vehicleMaintenence">fasfas</Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                <Button Text="Возврат на главную страницу" HeightRequest="70" WidthRequest="150" Clicked="homePageButton_Clicked"/>
+                <Button Text="Расчет стоимости техобслуживания" HeightRequest="70" WidthRequest="170" Clicked="countSummButton_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
